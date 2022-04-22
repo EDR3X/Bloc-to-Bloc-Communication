@@ -14,7 +14,11 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<ColorBloc>(create: (context) => ColorBloc()),
-        BlocProvider<CounterBloc>(create: (context) => CounterBloc())
+        BlocProvider<CounterBloc>(
+          create: (context) => CounterBloc(
+            colorBloc: context.read<ColorBloc>(),
+          ),
+        )
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
