@@ -25,10 +25,11 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
         incrementSize = 50;
       } else if (colorState.color == Colors.black) {
         incrementSize = -100;
+        add(ChangeCounterEvent());
       }
     });
 
-    on((event, emit) {
+    on<ChangeCounterEvent>((event, emit) {
       emit(
         state.copyWith(counter: state.counter + incrementSize),
       );
