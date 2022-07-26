@@ -1,7 +1,6 @@
 import 'package:bloc_to_bloc_communication/blocs/color/color_bloc.dart';
 import 'package:bloc_to_bloc_communication/blocs/counter/counter_bloc.dart';
 import 'package:bloc_to_bloc_communication/homepage.dart';
-import 'package:bloc_to_bloc_communication/observers/color_bloc_ovserver.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
